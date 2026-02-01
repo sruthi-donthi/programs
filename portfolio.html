@@ -1,0 +1,410 @@
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <!--fontawsome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+            <style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    border:none;
+    outline:none;
+    scroll-behavior: smooth;
+    font-family:'Nunito',sans-serif;
+}
+:root {
+  --bg-color: #191f36;
+  --snd-bf-color: #262840;
+  --text-color: #fff;
+  --main-color: #59B2F4;
+}
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+}
+body{
+    background: var(--bg-color);
+    color:var(--text-color);
+}
+section{
+    min-height: 100vh;
+    padding:10rem 9% 2rem;
+}
+img{
+    border-radius:100%;
+}
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:2rem 9%;
+    background:var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index:100;
+}
+.logo{
+    font-size:2.5rem;
+    color:var(--text-color);
+    font-weight:700;
+    cursor:default;
+}
+.navbar a{
+    font-size:1.5rem;
+    color:var(--text-color);
+    margin-left:4rem;
+    font-weight:700;
+}
+.navbar a:hover,
+.navbar a:active{
+    color:var(--main-color);
+}
+#menu-icon{
+    font-size:3.6rem;
+    color:var(--text-color); 
+    display:none;
+}
+.home{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:3rem;
+}
+.home-content h3{
+    font-size:3.2rem;
+    font-weight:700;
+}
+span{
+    color:var(--main-color); 
+}
+.home-content h1{
+    text-align: left;
+    font-size:5.6rem;
+    font-weight:700;
+    line-height:1.3;
+}
+.home-img img{
+    width:25vw;
+    animation:floatImage 4s ease-in-out infinite;
+    margin-left:80rem ;
+    margin-top:-20rem;
+}
+/*.social-media a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width: 4rem;
+    height:4rem;
+    background: transparent;
+    border:.2rem solid var(--main-color);
+    border-radius:50%;
+    font-size: 2rem;
+    color:var(--main-color);
+    margin:3rem 1.5rem 0;
+    transition:.5s ease;
+}*/
+.about-img img{
+    width:30vw;
+    border-radius:50px;
+    margin:0;
+}
+.heading{
+    text-align:center;
+    margin-top:-39rem;
+    font-size:30px;
+}
+.about-content h3{
+    text-align:center;
+    margin-left:2rem;
+    padding:10px;
+    font-size:20px;
+}
+    .about-content p{
+        font-size:1.6rem;
+        margin:2rem 0 3rem;
+        margin-left:45rem;
+    }
+.contact {
+    padding: 60px 10%;
+    background:var(--bg-color);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+.contact-form button {
+    padding: 12px;
+    background:var(--main-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #444;
+}
+.contact-info a{
+    color:var(--main-color);
+}
+span{
+    color:var(--main-color);
+}
+
+/* Section Background */
+.skills-section {
+    padding: 60px 0;
+    text-align: center;
+    background:var(--bg-color);
+    color: #fff;
+}
+
+/* Title */
+.skills-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Container */
+.skills-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Buttons */
+.skill-btn {
+    padding: 10px 20px;
+    background:var(--main-color);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.6);
+    font-size:1.6rem;
+}
+
+/* Hover Effect */
+.skill-btn:hover {
+    background: #0088cc;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 1);
+    transform: scale(1.05);
+}
+.projects {
+    padding: 60px 10%;
+    text-align: center;
+    background:var(--br--color); 
+    color: #fff;
+}
+
+.projects h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project-card {
+    width: 280px;
+    background: #00b4d8;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #00b4d8;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.project-btn {
+    display: inline-block;
+    background: #0077b6;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #023e8a;
+}
+</style>
+    </head>
+    <body>
+        <!--header section-->
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!--home section-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi,Myself</h3>
+            <h1>Donthi Sruthi</h1>
+            <h3>And I'm a <span>FullStack Developer</span></h3>
+            
+            <div class="home-img">
+                <img src="sruthi.jpeg" width="400px">
+            </div>
+        </div>
+    </section>
+    <!-- About section-->
+     <section class="about" id="about">
+        <div class="about-img">
+            <img src="about.jpeg">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">ABOUT  <span> Me</span></h2> 
+            <h3>Fullstack Developer</h3>
+            <p> I’m Donthi Sruthi, currently pursuing B.Tech Second year 
+                in Computer Science Engineering at RGUKT,RKV College.
+                I’m passionate about web development and love building clean,and  user-friendly websites. I enjoy learning new technologies and improving my coding skills every day.
+                Right now, I’m focusing on mastering HTML, CSS, JavaScript, and Full Stack Development.</p>
+            </div>
+     </section>
+      
+       <!--Skills section-->
+       <section class="skills-section" id="skills">
+        <h2 class="skills-title">My Skills</h2>
+    
+        <div class="skills-container">
+            <span class="skill-btn">HTML</span>
+            <span class="skill-btn">CSS</span>
+            <span class="skill-btn">JavaScript</span>
+            <span class="skill-btn">C Language</span>
+            <span class="skill-btn">Python</span>
+            <span class="skill-btn">DBMS</span>
+            <span class="skill-btn">Data Structures</span>
+            <span class="skill-btn">Java</span>
+        </div>
+    </section>
+       
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+    
+        <div class="projects-container">
+    
+            <div class="project-card">
+                <h2>Simple Calculator</h2>
+                <p>A basic calculator built using HTML, CSS and JavaScript that performs arithmetic operations.</p>
+                <a href="calculator.html" class="project-btn">View Project</a>
+            </div>
+    
+            <div class="project-card">
+                <h2>To-Do List App</h2>
+                <p>A task management application to add, delete, and mark tasks as completed.</p>
+                <a href="todolist.html" class="project-btn">View Project</a>
+            </div>
+    
+            <div class="project-card">
+                <h2>Weather Application</h2>
+                <p>A weather app that shows temperature and conditions. </p><br>
+                <a href="weather.html" class="project-btn">View Project</a>
+            </div>
+    
+        </div>
+        </section>
+<!-- Contact section-->
+<section class="contact" id="contact">
+    <h2>Contact  <span> Me</span></h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <p><strong>Email:</strong> donthisruthi@gmail.com</p>
+            <p><strong>Phone:</strong> 8074207077</p>
+            <p><strong>Location:</strong> India</p>
+            <p><strong>GitHub:</strong> 
+                <a href="https://github.com/sruthi-donthi" target="_blank">
+                    github.com/Donthi Sruthi
+                </a>
+            </p>
+            <p><strong>LinkedIn:</strong> 
+                <a href="https://www.linkedin.com/in/d-sruthi-671455324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    linkedin.com/in/Donthi Sruthi
+                </a>
+            </p>
+        </div>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+    </section>
+    </body>
+</html>
